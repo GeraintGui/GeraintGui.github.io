@@ -20,10 +20,10 @@ It includes two visualizations:
 ## View the Visualizations
 
 <h4>📈 UFO Reports per Year (Interactive)</h4>
-<iframe src="/assets/html/final_chart.html" width="100%" height="550" frameborder="0"></iframe>
+<iframe src="/assets/html/hw5_chart1.html" width="100%" height="550" frameborder="0"></iframe>
 
 <h4>🗺️ UFO Sightings by State (Dropdown Select)</h4>
-<iframe src="/assets/html/chart2.html" width="100%" height="550" frameborder="0"></iframe>
+<iframe src="/assets/html/hw5_chart2.html" width="100%" height="550" frameborder="0"></iframe>
 
 ## The Data & Notebook
 

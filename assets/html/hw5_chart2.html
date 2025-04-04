@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json", "format": {"feature": "states", "type": "topojson"}}, "mark": {"type": "geoshape", "stroke": "white"}, "encoding": {"color": {"field": "count", "scale": {"scheme": "blues"}, "title": "UFO Reports", "type": "quantitative"}, "tooltip": [{"field": "id", "title": "State FIPS", "type": "nominal"}, {"field": "count", "title": "Report Count", "type": "quantitative"}]}, "height": 450, "projection": {"type": "albersUsa"}, "title": "UFO Sightings by State (Total Count)", "transform": [{"lookup": "id", "from": {"data": {"name": "data-507eeaa3c403852d711986cf79b0ce55"}, "key": "id", "fields": ["count"]}}], "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-507eeaa3c403852d711986cf79b0ce55": [{"state": "ak", "count": 354, "id": "02"}, {"state": "al", "count": 691, "id": "01"}, {"state": "ar", "count": 666, "id": "05"}, {"state": "az", "count": 2689, "id": "04"}, {"state": "ca", "count": 9655, "id": "06"}, {"state": "co", "count": 1505, "id": "08"}, {"state": "ct", "count": 968, "id": "09"}, {"state": "dc", "count": 99, "id": "11"}, {"state": "de", "count": 183, "id": "10"}, {"state": "fl", "count": 4200, "id": "12"}, {"state": "ga", "count": 1347, "id": "13"}, {"state": "hi", "count": 353, "id": "15"}, {"state": "ia", "count": 707, "id": "19"}, {"state": "id", "count": 554, "id": "16"}, {"state": "il", "count": 2645, "id": "17"}, {"state": "in", "count": 1386, "id": "18"}, {"state": "ks", "count": 653, "id": "20"}, {"state": "ky", "count": 914, "id": "21"}, {"state": "la", "count": 598, "id": "22"}, {"state": "ma", "count": 1358, "id": "25"}, {"state": "md", "count": 911, "id": "24"}, {"state": "me", "count": 633, "id": "23"}, {"state": "mi", "count": 2071, "id": "26"}, {"state": "mn", "count": 1081, "id": "27"}, {"state": "mo", "count": 1576, "id": "29"}, {"state": "ms", "count": 415, "id": "28"}, {"state": "mt", "count": 510, "id": "30"}, {"state": "nc", "count": 1869, "id": "37"}, {"state": "nd", "count": 138, "id": "38"}, {"state": "ne", "count": 405, "id": "31"}, {"state": "nh", "count": 535, "id": "33"}, {"state": "nj", "count": 1512, "id": "34"}, {"state": "nm", "count": 815, "id": "35"}, {"state": "nv", "count": 905, "id": "32"}, {"state": "ny", "count": 3219, "id": "36"}, {"state": "oh", "count": 2425, "id": "39"}, {"state": "ok", "count": 766, "id": "40"}, {"state": "or", "count": 1845, "id": "41"}, {"state": "pa", "count": 2582, "id": "42"}, {"state": "ri", "count": 290, "id": "44"}, {"state": "sc", "count": 1076, "id": "45"}, {"state": "sd", "count": 196, "id": "46"}, {"state": "tn", "count": 1193, "id": "47"}, {"state": "tx", "count": 3676, "id": "48"}, {"state": "ut", "count": 743, "id": "49"}, {"state": "va", "count": 1393, "id": "51"}, {"state": "vt", "count": 307, "id": "50"}, {"state": "wa", "count": 4268, "id": "53"}, {"state": "wi", "count": 1333, "id": "55"}, {"state": "wv", "count": 486, "id": "54"}, {"state": "wy", "count": 205, "id": "56"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

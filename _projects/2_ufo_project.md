@@ -24,7 +24,7 @@ It includes two visualizations:
 ## The Data & Notebook
 
 <div class="left">
-{% include elements/button.html link="https://raw.githubusercontent.com/GeraintGui/GeraintGui.github.io/main/data/ufo.csv" text="The Data" %}
+{% include elements/button.html link="https://raw.githubusercontent.com/GeraintGui/GeraintGui.github.io/main/assets/data/ufo.csv" text="The Data" %}
 </div>
 
 <div class="right">

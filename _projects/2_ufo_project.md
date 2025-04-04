@@ -1,7 +1,7 @@
 ---
 name: UFO Sightings Visualization
 tools: [Python, Altair, Vega-Lite]
-
+image: /assets/pngs/ufo.png 
 description: An interactive analysis of UFO reports over time and across states.
 custom_js:
   - vega.min
@@ -17,9 +17,13 @@ It includes two visualizations:
 📈 A time series line chart that lets users click a year to see actual reports.  
 🗺️ A choropleth map showing UFO sightings by U.S. state.
 
-## View the Visualization
+## View the Visualizations
 
-👉 [**Click here to view the full project**](/hw5/)
+<h4>📈 UFO Reports per Year (Interactive)</h4>
+<iframe src="/assets/html/final_chart.html" width="100%" height="550" frameborder="0"></iframe>
+
+<h4>🗺️ UFO Sightings by State (Dropdown Select)</h4>
+<iframe src="/assets/html/chart2.html" width="100%" height="550" frameborder="0"></iframe>
 
 ## The Data & Notebook
 
@@ -30,3 +34,4 @@ It includes two visualizations:
 <div class="right">
 {% include elements/button.html link="https://github.com/GeraintGui/GeraintGui.github.io/blob/main/python_notebooks/ufo_visualization.ipynb" text="The Analysis" %}
 </div>
+

@@ -1,7 +1,7 @@
 ---
 name: UFO Sightings Visualization
 tools: [Python, Altair, Vega-Lite]
-image: /assets/pngs/ufo.png 
+image: assets/pngs/ufo.png 
 description: An interactive analysis of UFO reports over time and across states.
 custom_js:
   - vega.min
